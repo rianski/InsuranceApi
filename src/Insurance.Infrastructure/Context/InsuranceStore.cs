@@ -45,5 +45,69 @@ namespace Insurance.Infrastructure.Context
                 InsuranceEndDate = new DateTime(2024, 7, 20)
             },
         };
+
+        public static IList<Claim> InMemoryClaims { get; } = new List<Claim>
+        {
+            new Claim
+            {
+                UCR = "DS-1234",
+                CompanyId = 1,
+                ClaimDate = new DateTime(2023, 11, 1),
+                LossDate = new DateTime(2023, 10, 25),
+                AssuredName = "Admiral",
+                IncurredLoss = 18000,
+                Closed = false
+            },
+            new Claim
+            {
+               UCR = "GC-1324",
+               CompanyId = 1,
+               ClaimDate = new DateTime(2023, 12, 1),
+               LossDate = new DateTime(2023, 11, 5),
+               AssuredName = "Admiral",
+               IncurredLoss = 23250,
+               Closed = false
+            },
+            new Claim
+            {
+               UCR = "DS-2134",
+               CompanyId = 2,
+               ClaimDate = new DateTime(2023, 12, 1),
+               LossDate = new DateTime(2023, 11, 5),
+               AssuredName = "Macif",
+               IncurredLoss = 750,
+               Closed = false
+            },
+            new Claim
+            {
+               UCR = "DS-3124",
+               CompanyId = 3,
+               ClaimDate = new DateTime(2023, 9, 1),
+               LossDate = new DateTime(2023, 7, 3),
+               AssuredName = "AOK",
+               IncurredLoss = 500,
+               Closed = false
+            },
+            new Claim
+            {
+               UCR = "GC-3214",
+               CompanyId = 3,
+               ClaimDate = new DateTime(2023, 10, 1),
+               LossDate = new DateTime(2023, 9, 7),
+               AssuredName = "AOK",
+               IncurredLoss = 10000,
+               Closed = false
+            },
+            new Claim
+            {
+                UCR = "GC-3421",
+                CompanyId = 3,
+                ClaimDate = new DateTime(2022, 5, 9),
+                LossDate = new DateTime(2022, 5, 1),
+                AssuredName = "AOK",
+                IncurredLoss = 200,
+                Closed = true
+            },
+        };
     }
 }

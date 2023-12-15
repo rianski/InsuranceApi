@@ -20,6 +20,7 @@ namespace Insurance.Core
 
             services.AddSingleton(mapper);
             services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<IClaimService, ClaimsService>();
         }
     }
 }

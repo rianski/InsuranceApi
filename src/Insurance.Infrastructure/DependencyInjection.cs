@@ -10,6 +10,7 @@ namespace Insurance.Infrastructure
         public static void RegisterInfraDependencies(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddScoped<ICompanyRepository, CompanyRepository>();
+            services.AddScoped<IClaimRepository, ClaimRepository>();
         }
     }
 }

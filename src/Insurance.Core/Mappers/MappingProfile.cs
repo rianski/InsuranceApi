@@ -9,6 +9,7 @@ namespace Insurance.Core.Mappers
         public MappingProfile()
         {
             CreateMap<Company, CompanyDTO>().ReverseMap();
+            CreateMap<Claim, ClaimDTO>().ReverseMap();
         }
     }
 }
