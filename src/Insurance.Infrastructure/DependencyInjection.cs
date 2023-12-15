@@ -1,10 +1,7 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Insurance.Infrastructure.Interfaces;
+using Insurance.Infrastructure.Repositories;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Insurance.Infrastructure
 {
@@ -12,6 +9,7 @@ namespace Insurance.Infrastructure
     {
         public static void RegisterInfraDependencies(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddScoped<ICompanyRepository, CompanyRepository>();
         }
     }
 }
