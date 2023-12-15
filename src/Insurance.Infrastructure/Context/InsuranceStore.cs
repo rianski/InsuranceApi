@@ -109,5 +109,12 @@ namespace Insurance.Infrastructure.Context
                 Closed = true
             },
         };
+
+        public static IEnumerable<ClaimType> InMemoryClaimTypes { get; } = new List<ClaimType>
+        {
+            new ClaimType {Id = 1, Name = "General Claims"},
+            new ClaimType {Id = 2, Name = "Death In Service"},
+            new ClaimType {Id = 3, Name = "Natural Disaster"}
+        };
     }
 }

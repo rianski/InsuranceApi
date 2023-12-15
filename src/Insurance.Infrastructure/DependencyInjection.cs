@@ -11,6 +11,7 @@ namespace Insurance.Infrastructure
         {
             services.AddScoped<ICompanyRepository, CompanyRepository>();
             services.AddScoped<IClaimRepository, ClaimRepository>();
+            services.AddScoped<IClaimTypeRepository, ClaimTypeRepository>();
         }
     }
 }
